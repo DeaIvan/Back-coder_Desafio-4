@@ -1,0 +1,103 @@
+<body>
+  <style>
+    *{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body{
+        background-color: #333!important;
+        color: #fff;
+        margin: 50px;
+    }
+    .content1{
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+
+    .products{
+      padding: 0px 10px;
+    }
+
+    .content2{
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: top;
+      align-items: center;
+      border-left: 2px solid #666;
+    }
+
+    form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form p{
+      font-size: 16px;
+      margin: 5px;
+    }
+
+    .env{
+      margin: 10px;
+    }
+
+    h1{
+        font-size: 28px;
+        color: #ffffff;
+    }
+
+    button{
+        color: #fff;
+        background-color: #330099;
+        border: none;
+        padding: 5px;
+        height: 30px;
+        font-size: 18px;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+    }
+    button:hover{
+        color: #330099;
+        background-color: #fff;
+    }
+  </style>
+  <div class="content1">
+    <div class="products">
+      <h1 id="ola">Productos agregados</h1>
+      <div class="contenedor" id="container">
+      </div>
+    </div>
+
+    <div class="content2">
+      <h1>Agregar Producto</h1>
+      <div class="form">
+        <form action="post" id="form">
+          <p>Title</p>
+          <input type="text" name="title" required/>
+          <p>Description</p>
+          <input type="text" name="description" required/>
+          <p>Code</p>
+          <input type="text" name="code" required />
+          <p>Price</p>
+          <input type="text" name="price" required/>
+          <p>Status</p>
+          <input type="text" name="status" required/>
+          <p>Stock</p>
+          <input type="text" name="stock" required/>
+          <p>Category</p>
+          <input type="text" name="category" required/>
+
+          <button class="env" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
